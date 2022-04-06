@@ -1,1 +1,1 @@
-# People_Managment_System
+# People Managment System
