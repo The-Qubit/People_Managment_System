@@ -1,4 +1,5 @@
 # People Managment System
 
-## Ideas
-- Add-on
+## Features
+- Webinterface
+- JSON-Datenbank
