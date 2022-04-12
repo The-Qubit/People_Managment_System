@@ -1,5 +1,6 @@
 - name
 - bday
+- address
 - phonenumber
 - insta
 - tiktok
