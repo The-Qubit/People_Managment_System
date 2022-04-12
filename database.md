@@ -7,4 +7,3 @@
 - linkedIn
 - github
 - email
-- 
