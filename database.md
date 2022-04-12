@@ -1,0 +1,9 @@
+- name
+- bday
+- phonenumber
+- insta
+- tiktok
+- linkedIn
+- github
+- email
+- 

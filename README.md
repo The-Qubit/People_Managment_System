@@ -1,4 +1,6 @@
 # People Managment System
 
-## Ideas
-- Add-on
+## Goals
+- database with information
+- memory database
+- people status
