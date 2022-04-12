@@ -13,10 +13,12 @@ def create_profile_csv(username='maxmustermann'):
         print('An error occured')
         print(e)
 
-
-
 def create_account_folder(username='maxmustermann'):
     global db_dir
+    try:
+        os.mkdir(os.path.join(db_dir))
+    except FileExistsError:
+        pass
     try:
         os.mkdir(os.path.join(db_dir, username))
     except FileExistsError:
