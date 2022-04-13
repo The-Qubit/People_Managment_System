@@ -54,3 +54,4 @@ if __name__ == '__main__':
     else:
         print('Error: Scripts must be run with 2 or more parameters')
         sys.exit(1)
+
