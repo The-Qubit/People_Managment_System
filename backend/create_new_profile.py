@@ -10,6 +10,7 @@ def add_lines_to_table(username, table, fieldnames, lines):
     file_exists = os.path.exists(os.path.join(db_dir, username, table + '.csv'))
     with open(os.path.join(db_dir, username, table + '.csv'), 'a') as table_csv:
         table_file = csv.DictWriter(table_csv, fieldnames=fieldnames, delimiter=',', quotechar='"')
+        # If csv file is new, write attributes header
         if not file_exists:
             table_file.writeheader()
         for line in lines:
@@ -32,6 +33,8 @@ def create_new_profile(username, attributes_raw):
             if attribute not in tables:
                 tables[attribute] = []
             tables[attribute].append([])
+            # These 3 statements make up one line which is to be added
+            # to the csv file {attribute}.csv in the database dir
             tables[attribute][-1].append(('profile_id', new_id))
             tables[attribute][-1].append(('order', len(tables[attribute]) - 1))
             tables[attribute][-1].append((attribute, value))
