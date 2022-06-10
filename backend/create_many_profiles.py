@@ -10,8 +10,9 @@ def main():
     profiles = [
             (username, ['firstname:Maxim',
                 'surname:Kutscher',
-                'phone:+49123432',
-                'phone:+491234323',
+                'middlename:Iwanowitsch',
+                'phone:+4917668013482',
+                'phone:+4915737291381',
                 'instagram:maximkutscher',
                 'birthday:8',
                 'birthmonth:6',
