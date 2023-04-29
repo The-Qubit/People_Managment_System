@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import sys
+
 import pyodbc
 
 def main():
@@ -8,12 +10,12 @@ def main():
     username = 'sa'
     password = 'User Retrain Shelve Showy Goatskin Dowry Twelve Petunia'
 
-    conn = pyodbc.connect(f'
+    conn = pyodbc.connect(f'''
       DRIVER={{ODBC Driver 17 for SQL Server}};
       SERVER={server};
       DATABASE={database};
       UID={username};
-      PWD={password}'
+      PWD={password}'''
     )
 
     new_db_name = 'test'
