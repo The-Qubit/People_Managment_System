@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "User Retrain Shelve Showy Goatskin Dowry Twelve Petunia"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
+#    volumes:
+#      - ./data:/var/opt/mssql/data
+  api:
+    build: api
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+#    environment:
+#      DB_HOST: db
+#      DB_NAME: flaskdb
+#      DB_USER: sa
+#      DB_PASSWORD: YourStrong!Passw0rd
+  frontend:
+    build: frontend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - api
+# environment:
+#   API_URL: http://api:5000/
