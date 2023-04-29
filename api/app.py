@@ -11,4 +11,4 @@ def test():
     return 'Hello World\n'
 
 if __name__ == '__main__':
-    sys.exit(app.run(host='0.0.0.0', port=8080))
+    sys.exit(app.run(host='0.0.0.0', port=5000))
