@@ -150,3 +150,6 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# MS SQL Data directory
+/data/
