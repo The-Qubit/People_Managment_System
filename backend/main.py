@@ -8,7 +8,7 @@ def main():
     server = '192.168.178.24:1433'
     database = 'master'
     username = 'sa'
-    password = 'Survive_Hertz_Massager_Rage_Creative_Grievous_Mossy_Purify144'
+    password = 'Survive_Hertz_Massager_Rage_Creative_Grievous_Mossy_Purify144!'
 
     conn = pyodbc.connect(f'''
       DRIVER={{ODBC Driver 18 for SQL Server}};
