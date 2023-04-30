@@ -2,15 +2,14 @@ version: '3.8'
 services:
   db:
     image: mcr.microsoft.com/mssql/server:2022-latest
-    user: 0:0
     ports:
       - "1433:1433"
     environment:
-      SA_PASSWORD: "User Retrain Shelve Showy Goatskin Dowry Twelve Petunia"
+      SA_PASSWORD: "Survive_Hertz_Massager_Rage_Creative_Grievous_Mossy_Purify144"
       ACCEPT_EULA: "Y"
-      MSSQL_PID: "Express"
-#    volumes:
-#      - ./data:/var/opt/mssql/data
+     #MSSQL_PID: "Express"
+   #volumes:
+     #- ./data:/var/opt/mssql/data
   api:
     build: api
     ports:
