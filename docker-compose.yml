@@ -5,7 +5,7 @@ services:
     ports:
       - "1433:1433"
     environment:
-      SA_PASSWORD: "Survive_Hertz_Massager_Rage_Creative_Grievous_Mossy_Purify144"
+      MSSQL_SA_PASSWORD: "Survive_Hertz_Massager_Rage_Creative_Grievous_Mossy_Purify144"
       ACCEPT_EULA: "Y"
      #MSSQL_PID: "Express"
    #volumes:
