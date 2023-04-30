@@ -5,7 +5,7 @@ import sys
 import pyodbc
 
 def main():
-    server = 'localhost:1433'
+    server = '192.168.178.24:1433'
     database = 'master'
     username = 'sa'
     password = 'Survive_Hertz_Massager_Rage_Creative_Grievous_Mossy_Purify144'
