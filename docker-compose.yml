@@ -7,33 +7,27 @@ services:
     environment:
       MSSQL_SA_PASSWORD: "Survive_Hertz_Massager_Rage_Creative_Grievous_Mossy_Purify144!"
       ACCEPT_EULA: "Y"
-      #MSSQL_PID: "Express"
-    volumes:
-      - ./data:/var/opt/mssql/data
-  api:
-    build: api
+      # volumes:
+      #   - ./data:/var/opt/mssql/data
+  backend:
+    build: backend
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     ports:
       - "5000:5000"
     depends_on:
       - db
-#    environment:
-#      DB_HOST: db
-#      DB_NAME: flaskdb
-#      DB_USER: sa
-#      DB_PASSWORD: YourStrong!Passw0rd
+    volumes:
+      - ./backend:/app
+    environment:
+      DB_PASSWORD: "Survive_Hertz_Massager_Rage_Creative_Grievous_Mossy_Purify144!"
   frontend:
     build: frontend
     ports:
       - "8080:8080"
     restart: always
     depends_on:
-      - api
+      - backend
     volumes:
       - ./frontend/src:/app/src
       - ./frontend/public:/app/public
-  backend:
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-    build: backend
-    depends_on:
-      - frontend
