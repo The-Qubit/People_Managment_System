@@ -27,5 +27,9 @@ services:
       - "8080:8080"
     depends_on:
       - api
-# environment:
-#   API_URL: http://api:5000/
+  backend:
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    build: backend
+    depends_on:
+      - frontend
