@@ -5,18 +5,19 @@ import sys
 import pyodbc
 
 def main():
-    server = '192.168.178.24:1433'
+    server = 'localhost'
     database = 'master'
     username = 'sa'
     password = 'Survive_Hertz_Massager_Rage_Creative_Grievous_Mossy_Purify144!'
 
     conn = pyodbc.connect(f'''
-      DRIVER={{ODBC Driver 18 for SQL Server}};
+      DRIVER={{ODBC Driver 17 for SQL Server}};
       SERVER={server};
       DATABASE={database};
       UID={username};
       PWD={password}'''
     )
+    cursor = conn.cursor()
 
     new_db_name = 'test'
     cursor.execute(f'CREATE DATABASE {new_db_name}')
